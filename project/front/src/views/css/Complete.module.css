@@ -1,0 +1,16 @@
+/* Complete */
+.alignCenter {
+  display: flex;
+  height: 85vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignCenter h2 {
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 24px;
+}

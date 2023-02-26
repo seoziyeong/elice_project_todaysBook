@@ -1,0 +1,33 @@
+/* 상품 리스트 왼쪽 카테고리 메뉴 */
+
+.selected {
+  border-bottom: 1px solid #d5d5d5;
+  padding: 8px 0;
+}
+.selected a {
+  color: #000;
+  font-weight: 700;
+  display: block;
+  padding: 12px;
+}
+
+.unSelected {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  color: #808080;
+  cursor: pointer;
+}
+.unSelected a {
+  color: #959595;
+  display: block;
+  padding: 12px;
+}
+.unSelected a:hover {
+  color: #000;
+}
+
+.pageTitle {
+  font-weight: bold;
+  margin-left: 24px;
+  margin-bottom: 24px;
+}

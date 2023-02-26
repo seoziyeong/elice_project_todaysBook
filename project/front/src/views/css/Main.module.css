@@ -1,0 +1,9 @@
+/* Main */
+.mainCarousel {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.mainBg {
+  max-width: 100%;
+  height: auto;
+}

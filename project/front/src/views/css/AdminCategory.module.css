@@ -1,0 +1,11 @@
+/* 관리자 페이지 : 카테고리/상품 관리 */
+
+.selectBox {
+  display: flex;
+  margin: 0 0 36px 24px;
+}
+
+.selectBox select {
+  width: 210px;
+  margin-right: 8px;
+}

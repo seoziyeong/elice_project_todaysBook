@@ -1,0 +1,65 @@
+#!/usr/bin/env node
+
+// Module dependencies.
+var app = require("../app");
+var debug = require("debug")("server:server");
+var http = require("http");
+
+// --- Express 서버 오픈 포트 지정 -> 3001번으로! ---
+var port = normalizePort(process.env.PORT || "3001");
+app.set("port", port);
+
+// --- Create HTTP server 서버 생성 ---
+var server = http.createServer(app);
+
+// --- 지정한 포트로 listen 및 에러처리 ---
+console.log("--------------------------------------------");
+server.listen(port);
+server.on("error", onError);
+server.on("listening", onListening);
+
+// Normalize a port into a number, string, or false.
+function normalizePort(val) {
+    var port = parseInt(val, 10);
+    if (isNaN(port)) {
+        // named pipe
+        return val;
+    }
+    if (port >= 0) {
+        // port number
+        return port;
+    }
+    return false;
+}
+
+// --- 서버 연결 에러 발생시 처리하는 onError ---
+function onError(error) {
+    if (error.syscall !== "listen") {
+        throw error;
+    }
+    var bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
+    // --- 에러 종류에 따른 에러 문주 출력 ---
+    switch (error.code) {
+        // 권한 없음 문구
+        case "EACCES":
+            console.error(bind + " requires elevated privileges");
+            process.exit(1);
+            break;
+            // 해당 포트가 이미 사용 중일때 에러 문구
+        case "EADDRINUSE":
+            console.error(bind + " is already in use");
+            process.exit(1);
+            break;
+            // 디폴트 에러
+        default:
+            throw error;
+    }
+}
+
+// 서버가 정상적으로 listening 상태일 때. 연결 성공 문구.
+function onListening() {
+    var addr = server.address();
+    var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
+    debug("Listening on " + bind);
+    console.log(`정상적으로 서버를 시작하였습니다. http://localhost:${port}`);
+}

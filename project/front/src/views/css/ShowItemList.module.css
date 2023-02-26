@@ -1,0 +1,45 @@
+/* 아이템 리스트 컴포넌트 */
+.row {
+  margin-bottom: 40px;
+  padding: 100;
+}
+.card {
+  width: 210px;
+  margin: 0 26px 24px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.productThumbnail {
+  width: 210px;
+  height: 310px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+.productThumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.productThumbnail:hover img {
+  transform: scale(1.07);
+  transition: 0.5s;
+}
+.productThumbnail:not(:hover) img {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.textArea {
+  height: 90px;
+}
+
+.btn {
+  scale: 75%;
+  margin-left: -8px;
+}

@@ -1,0 +1,65 @@
+.titleArea {
+  display: flex;
+  justify-content: space-between;
+}
+.titleArea Button {
+  height: 38px;
+  scale: 80%;
+}
+.productThumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 8px 16px 8px 8px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tdAlignLeft {
+  text-align: left;
+  width: 40%;
+}
+
+.qty {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.qtyButton {
+  width: 38px;
+  background-color: white;
+}
+
+.orderInfo {
+  margin: 0px 0px 8px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.orderInfo h3 {
+  margin: 16px 0 24px;
+}
+.orderInfo h4 {
+  font-weight: bold;
+}
+
+.orderList p {
+  margin-bottom: 4px;
+}
+
+.info,
+.result {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result {
+  border-top: 1px solid #dee2e6;
+  padding: 24px 12px 0px 12px;
+}
+
+.emptyCart {
+  height: 300px;
+}
